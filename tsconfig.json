@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext", "ES2022"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "outDir": "./dist",
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/(models)/User.ts",
+    "app/api/auth/[...nextauth]/[...nextauth].ts",
+    "app/api/auth/[...nextauth]/route.ts",
+    "app/api/Users/route.ts",
+    "lib/**/*.ts"
+  ],
+  "exclude": ["node_modules"],
+  "ts-node": { "esm": true, "experimentalSpecifierResolution": "node" }
+}
